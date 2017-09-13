@@ -1,0 +1,12 @@
+
+h2 {
+    display: inline-block;
+}
+
+.charactersheet {
+    text-align: center;
+}
+
+.races {
+    background-color: red;
+}
