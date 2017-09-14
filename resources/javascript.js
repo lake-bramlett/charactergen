@@ -639,13 +639,15 @@ var level = 1;
 
         level = 1;
 
-        $('.class-level').html('Class Level: ' + level);
+        $('.class-level').html('Class Level: ');
+        $('.levelnumber').html(level);
         $('.class-button').html('<button class="increase-level">Level Up</button>');
         $('.increase-level').click(function () {
 
             if (level < 20) {
                 level ++;
-                $('.class-level').html('Class Level: ' + level);
+                $('.class-level').html('Class Level: ');
+                $('.levelnumber').html(level);
                 console.log('Class Level: ' + level);
             };
 

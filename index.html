@@ -1,117 +1,199 @@
 <!DOCTYPE html>
 <html>
+
 <head>
- <title>D&ampD Character Creator</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>D&ampD Character Creator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
+
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="resources/javascript.js" type="text/javascript"></script>
+    <script src="resources/javascript.js" type="text/javascript"></script>
 
-
-<h1>D&ampD Character Creator<h1>
+    <h1 class="title">D&ampD Character Creator</h1>
 
     <div class="character">
-        
-       
-        <div class="charactername">
+
+        <div class="container charinfo">
+            <div class="row charactername">
+                <div class="col-2">
+                    <label for="nameinput">
+                        Name:
+                    </label>
+                </div>
+                <div class="col-2">
+                    <input type="text" id="nameinput">
+                </div>
+
+            </div>
+
+            <div class="row characterage">
+                <div class="col-2">
+                    <label for="ageinput">
+                        Age:
+                    </label>
+                </div>
+                <div class="col-2">
+                    <input type="number" class="ageinput">
+                </div>
+            </div>
+                <div class="row race">
+                    <div class="col-2">
+                        <label for="races">
+                            Race:
+                        </label>
+                    </div>
+                    <div class ="col-2">
+                        <select name="races">
+                            <option value="0"></option>
+                            <option value="1">Hill Dwarf</option>
+                            <option value="2">Mountain Dwarf</option>
+                            <option value="3">High Elf</option>
+                            <option value="4">Wood Elf</option>
+                            <option value="5">Dark Elf (Drow)</option>
+                            <option value="6">Lightfoot Halfling</option>
+                            <option value="7">Stout Halfling</option>
+                            <option value="8">Human</option>
+                            <option value="9">Dragonborn</option>
+                            <option value="10">Forest Gnome</option>
+                            <option value="11">Rock Gnome</option>
+                            <option value="12">Half-Elf</option>
+                            <option value="13">Half-Orc</option>
+                            <option value="14">Tiefling</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row class">
+                    <div class="col-2">
+                        <label>
+                            Class:
+                        </label>
+                    </div>
+                    <div class="col-2">
+                        <select name="classes">
+                            <option value="none"></option>
+                            <option value="barbarian">Barbarian</option>
+                            <option value="bard">Bard</option>
+                            <option value="cleric">Cleric</option>
+                            <option value="druid">Druid</option>
+                            <option value="fighter">Fighter</option>
+                            <option value="monk">Monk</option>
+                            <option value="paladin">Paladin</option>
+                            <option value="ranger">Ranger</option>
+                            <option value="rogue">Rogue</option>
+                            <option value="sorcerer">Sorcerer</option>
+                            <option value="warlock">Warlock</option>
+                            <option value="wizard">Wizard</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row level">
+                    <div class="col-2 class-level"></div>
+                    <div class="col-2 levelnumber"></div>
+                    <div class="col-2 class-button"></div>
+                </div>
+                <div class="row alignment">
+                    <div class="col-2">
+                        Alignment:
+                    </div>
+                    <div class="col-2">
+                        <select name="alignment">
+                            <option value='lg'>Lawful Good</option>
+                            <option value='ng'>Neutral Good</option>
+                            <option value='cg'>Chaotic Good</option>
+                            <option value='ln'>Lawful Neutral</option>
+                            <option value='nn'>Neutral</option>
+                            <option value='cn'>Chaotic Neutral</option>
+                            <option value='le'>Lawful Evil</option>
+                            <option value='ne'>Neutral Evil</option>
+                            <option value='ce'>Chaotic Evil</option>
+                        </select>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container stats">
+        <div class="ability">Ability Points:
+            <div id="abi"></div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="strength">Strength:
+                    <div id="str"></div>
+                    <button class="decreasestr">-</button>
+                    <button class="increasestr">+</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="dexterity">Dexterity:
+                    <div id="dex"></div>
+                    <button class="decreasedex">-</button>
+                    <button class="increasedex">+</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="constitution">Constitution:
+                    <div id="con"></div>
+                    <button class="decreasecon">-</button>
+                    <button class="increasecon">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="intelligence">Intelligence:
+                    <div id="int"></div>
+                    <button class="decreaseint">-</button>
+                    <button class="increaseint">+</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="wisdom">Wisdom:
+                    <div id="wis"></div>
+                    <button class="decreasewis">-</button>
+                    <button class="increasewis">+</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="charisma">Charisma:
+                    <div id="cha"></div>
+                    <button class="decreasecha">-</button>
+                    <button class="increasecha">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button class="randomize">Roll Random Attributes</button>
+        </div>
+    </div>
+
+    <div class="inventory">Inventory
+        <br />
+        <form class="list-content">
             <label>
-            Name:
-        <input type="text">
-        </label>
-    </div>
-    <div class="characterage">
-        <label>
-            Age:
-            <input type="number" class="age">
+                <input type="text" class="item-input">
             </label>
-        <div class="race">
-        <label> 
-            Race: 
-            <select name="races">
-                <option value="0"></option>
-    <option value="1">Hill Dwarf</option>
-    <option value="2">Mountain Dwarf</option>
-    <option value="3">High Elf</option>
-    <option value="4">Wood Elf</option>
-    <option value="5">Dark Elf (Drow)</option>
-    <option value="6">Lightfoot Halfling</option>
-    <option value="7">Stout Halfling</option>                
-    <option value="8">Human</option>
-    <option value="9">Dragonborn</option>    
-    <option value="10">Forest Gnome</option>
-    <option value="11">Rock Gnome</option>
-    <option value="12">Half-Elf</option>
-    <option value="13">Half-Orc</option>
-    <option value="14">Tiefling</option>                
-</select>
- 
-        </label>
-        </div>
+            <ul class="inventory-list">
+                <!-- <li>Sample Item</li> -->
+            </ul>
 
-         <div class="class">
-        <label> 
-            Class:
-            <select name="classes">
-             
-    <option value="none"></option>
-    <option value="barbarian">Barbarian</option>
-    <option value="bard">Bard</option>
-    <option value="cleric">Cleric</option>
-    <option value="druid">Druid</option>
-    <option value="fighter">Fighter</option>
-    <option value="monk">Monk</option>
-    <option value="paladin">Paladin</option>
-    <option value="ranger">Ranger</option>
-    <option value="rogue">Rogue</option>
-    <option value="sorcerer">Sorcerer</option>
-    <option value="warlock">Warlock</option>
-    <option value="wizard">Wizard</option>
-            </select>
- </label>
-        </div>
-        </div>
-        <div class='class-level'></div>
-        <div class='class-button'></div><br />
-        <div class='alignment'>
-            Alignment:
-            <select name='alignment'>
-                <option value='lg'>Lawful Good</option>
-                <option value='ng'>Neutral Good</option>
-                <option value='cg'>Chaotic Good</option>
-                <option value='ln'>Lawful Neutral</option>
-                <option value='nn'>Neutral</option>
-                <option value='cn'>Chaotic Neutral</option>
-                <option value='le'>Lawful Evil</option>
-                <option value='ne'>Neutral Evil</option>
-                <option value='ce'>Chaotic Evil</option>
-            </select>
-        </div>
-     
-        <div class="ability">Ability Points: <div id="abi"></div></div>    
-        <div class="strength">Strength: <div id="str"></div><button class="increasestr">+</button><button class="decreasestr">-</button></div>
-        <div class="dexterity">Dexterity: <div id="dex"></div><button class="increasedex">+</button><button class="decreasedex">-</button></div>
-        <div class="constitution">Constitution: <div id="con"></div><button class="increasecon">+</button><button class="decreasecon">-</button></div>
-        <div class="intelligence">Intelligence: <div id="int"></div><button class="increaseint">+</button><button class="decreaseint">-</button></div>
-        <div class="wisdom">Wisdom: <div id="wis"></div><button class="increasewis">+</button><button class="decreasewis">-</button></div>
-        <div class="charisma">Charisma: <div id="cha"></div><button class="increasecha">+</button><button class="decreasecha">-</button></div>
+            <button class="add-item">Add Item</button>
 
-    <br />
-    <button class="randomize">Roll Random Attributes</button>
+        </form>
     </div>
 
-<div class="inventory">Inventory <br />
-<form class="list-content">
-    <label>
-          <input type="text" class="item-input">
-        </label>
-        <ul class="inventory-list">
-          <!-- <li>Sample Item</li> -->
-        </ul>
-        
-        <button class="add-item">Add Item</button>
-      
-      </form>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
+
 </html>
